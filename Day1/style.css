@@ -1,0 +1,121 @@
+body{
+    background: whitesmoke ;
+    background-repeat:fixed;
+    background-size: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(bg.png);
+}
+
+.container{
+    width: 550px;
+    min-height: 750px;
+    background-color: white;
+    border:2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.6;
+}
+
+label{
+    color: blue;
+    font-size: large;
+}
+h1{
+    color: rgb(80, 208, 240);
+}
+.input-area{
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+input, select, textarea{
+    width: 400px;
+    max-width:400px;
+    height:40px;
+    opacity: 1;
+    background:whitesmoke;
+    border-radius: 10px;
+    border: 2px solid skyblue;
+}
+
+.button-area{
+    display: flex;
+    margin-top: 10px;
+}
+
+.checkbox{
+    width: auto;
+    height: auto;
+}
+
+button{
+    background-color: black;
+    color: white;
+    margin-top: 2px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.reset-button{
+    background-color: red;
+    color: white;
+    margin-top: 2px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    opacity:1;
+}
+
+table{
+    margin: 10px;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+}
+
+th, td{
+    border: 2px solid skyblue;
+    border-radius: 10px;
+}
+
+.list-items{
+    display: flex;
+    flex-direction: row;
+}
+
+.list-items li{
+    border: 2px solid skyblue;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+.employes-profile{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+}
+
+.profile-image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-left: 15px;
+}
+
+.profile-image h3, p{
+    margin-left: 30px;
+}
+
+.profile-image h3{
+    color: blue;
+}
+
+.profile-image p{
+    color: blue;
+}

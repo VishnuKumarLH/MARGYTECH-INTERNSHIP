@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Regstration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Employee Registration Form</h1>
+            <form>
+                <div class="input-area">
+                    <label>Name:</label><br>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-area">
+                    <label>Id:</label><br>
+                    <input type="text" placeholder="Enter your id" required>
+                </div>
+                <div class="input-area">
+                    <label>Age:</label><br>
+                    <input type="number" placeholder="Enter your age" required>
+                </div>
+                <div class="input-area">
+                    <label>Gender:</label><br>
+                    <select >
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="input-area">
+                    <label>Phone:</label><br>
+                    <input type="tel" placeholder="Enter your phone number" required>
+                </div>
+                <div class="input-area">
+                    <label>Email:</label><br>
+                    <input type="email" placeholder="Enter your mail id" required>
+                </div>
+                <div class="input-area">
+                    <label>Position:</label><br>
+                    <input type="text" placeholder="Enter your position" required>
+                </div>
+                <div class="input-area">
+                    <label>Enter message (optional):</label><br>
+                    <textarea placeholder="Enter your message"></textarea>
+                </div>
+                <div class="input-area">
+                    <input type="checkbox" class="checkbox">I agree to the <a href="#">terms and conditions</a>.
+                </div>
+                <div class="button-area">
+                    <input type="reset" class="reset-button">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+
+            <h1>Employee Details</h1>
+            <div class="employess-list">
+                <table border="1">
+                    <tr>
+                        <th>Name</th>
+                        <th>Id</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Position</th>
+                    </tr>
+                    <tr>
+                        <td>John Snow</td>
+                        <td>2343</td>
+                        <td>32</td>
+                        <td>Male</td>
+                        <td>9827469210</td>
+                        <td>johnsnow@gmail.com</td>
+                        <td>Manager</td>
+                    </tr>
+                      <tr>
+                        <td>Anushka</td>
+                        <td>4352</td>
+                        <td>28</td>
+                        <td>Female</td>
+                        <td>9345353210</td>
+                        <td>anushka@gmail.com</td>
+                        <td>Suport Engineer</td>
+                    </tr>
+                      <tr>
+                        <td>Manikam</td>
+                        <td>4324</td>
+                        <td>38</td>
+                        <td>Male</td>
+                        <td>964367510</td>
+                        <td>manikam@gmail.com</td>
+                        <td>Frontend Developer</td>
+                    </tr>
+                        <td>Emma</td>
+                        <td>6543</td>
+                        <td>30</td>
+                        <td>Female</td>
+                        <td>9343786510</td>
+                        <td>emma@gmail.com</td>
+                        <td>Full Stack Developer</td>
+                    </tr>
+                </table>
+            </div>
+            <h1>Top Employes List</h1>
+            <div class="list-items">
+                <ul>
+                    <li>John Snow</li>
+                    <li>Anushka</li>
+                    <li>Manikam</li>
+                    <li>Emma</li>
+                </ul>
+                <ol>
+                    <li>John Snow</li>
+                    <li>Anushka</li>
+                    <li>Manikam</li>
+                    <li>Emma</li>
+                </ol>
+            </div>
+            <h1>Employe Profile</h1>
+            <div class="employes-profile">
+                <div class="profile-image">
+                    <img src="employee-1.png" alt="employee 1">
+                    <h3>John Snow</h3>
+                    <p>Manager</p>
+                </div>
+                 <div class="profile-image">
+                    <img src="employee-2.png" alt="employee 2">
+                    <h3>Anushka</h3>
+                    <p>Support Engineer</p>
+                </div>
+                 <div class="profile-image">
+                    <img src="employee-3.png" alt="employee 3">
+                    <h3>Manikam</h3>
+                    <p>Frontend Developer</p>
+                </div>
+                 <div class="profile-image">
+                    <img src="employee-4.png" alt="employee 4">
+                    <h3>Emma</h3>
+                    <p>Full Stack Developer</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Master</title>
+
+    <style>
+        body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    width: 1000px;
+    height: 100%;
+    border-radius: 20px;
+    margin-top: 30px;
+    
+    
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    margin-top: 3px;
+    background-color: rgba(255, 255, 255, 0);
+}
+input:focus{
+    outline: none;
+    border-bottom: 2px solid black;
+}
+select{
+    width:200px;
+    height: 30px;
+    margin-top: 6px;
+    background-color: rgba(255, 192, 203, 0);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+ 
+.row{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   /* flex-direction: row; */
+    margin-top: 50px;
+    margin-left: 140px;
+   
+}
+
+.col-md-3{
+    flex:0 0 auto;
+    width: 25%;
+  
+}
+
+h1{
+    color: black;
+    margin-bottom: -10px;
+    text-shadow: 0px 4px 8px white ;
+    font-weight: 900;
+    font-size: 40px;
+    margin-left: 138px;
+}
+
+label{
+    font-size: 15px;
+    font-weight: 700;
+    color:black;
+}
+
+#btn{
+    width: 200px;
+    height: 30px;
+    margin-top: 50px;
+    margin-left: 138px;
+    margin-bottom: 20px;
+    background-color:rgb(70, 252, 70);
+    box-shadow: 0px 4px 8px white;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+button:hover{
+    scale: 1.1;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Master</h1><br>
+        <form>
+        <div class="row row1">
+            <div class="col-md-3">
+        <div class="input-items">
+            <label>Enter test code</label>
+            <input type="number" placeholder="Test code" id="test-code">
+        </div>
+        </div>
+        <div class="col-md-3">
+         <div class="input-items">
+            <label>Enter test name</label>
+            <input type="text" placeholder="Test name" id="test-name">
+        </div>
+        </div>
+         <div class="col-md-3">
+         <div class="input-items">
+            <label>Choose specimen</label>
+            <select id="specimen-name">
+                <option>Urine test</option>
+                <option>Blood test</option>
+                <option>DNA test</option>
+            </select>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+         <div class="input-items">
+            <label>Enter date</label>
+            <input type="date" placeholder="Date" id="date">
+        </div>
+        </div>
+         <div class="col-md-3">
+         <div class="input-items">
+            <label>Enter MRP</label>
+            <input type="number" placeholder="MRP" id="mrp">
+        </div>
+        </div>
+         <div class="col-md-3">
+         <div class="input-items">
+            <label>Enter location name</label>
+            <input type="text" placeholder="Location name" id="location">
+        </div>
+        </div>
+        </div>
+        <div class="row">
+             <div class="col-md-3">
+         <div class="input-items">
+            <label>Enter referal address</label>
+            <input type="address" placeholder="Address" id="address">
+        </div>
+        </div>
+         <div class="col-md-3">
+         <div class="input-items">
+            <label>Upload document</label>
+            <input type="file" placeholder="Upload file" id="document">
+        </div>
+        </div>
+        </div>
+        <input id="btn" type="button" onclick="save()" value="save">
+        </form>
+    </div>
+    <div class="datass">
+        <ul id="datas"></ul>
+    </div>
+    
+  
+</body>
+</html>
+
+<script>
+
+    let testcode = document.getElementById("test-code");
+    let testname = document.getElementById("test-name");
+    let specimenname = document.getElementById("specimen-name");
+    let date = document.getElementById("date");
+    let mrp = document.getElementById("mrp");
+    let loc = document.getElementById("location");
+    let address = document.getElementById("address");
+    let file = document.getElementById("document");
+
+
+    function save(){
+       if(testcode.value == "" || testcode.value < 0){
+        alert("Please fill the test code correctly");
+       }
+       else if(testname.value == "" || isNaN(testname.value) == false){
+        alert("Please fill the test name correctly");
+       }
+       else if(date.value == ""){
+        alert("Please fill the date correctly");
+       }
+       else if(mrp.value == "" || mrp.value < 0){
+        alert("Please fill the MRP correctly");
+       }
+       else if(loc.value == "" || isNaN(loc.value) == false){
+        alert("Please fill the location name correctly");
+       }
+       else if(address.value == ""){
+        alert("Please fill the referal address correctly");
+       }
+       else{
+
+        let data = {
+            testcode: testcode.value,
+            testname: testname.value,
+            specimenname: specimenname.value,
+            date: date.value,
+            mrp: mrp.value,
+            location: loc.value,
+            address: address.value,
+            file: file.value
+        };
+        
+        // let li = document.createElement("h3");
+        // li.innerHTML = `Test code: ${data.testcode} <br> Test name: ${data.testname} <br> Specimen name: ${data.specimenname} <br> Date: ${data.date} <br> MRP: ${data.mrp} <br> Location name: ${data.location} <br> Referal address: ${data.address} <br> Document: ${data.file}`;
+        // document.getElementById("datas").appendChild(li);
+        alert("Your form submitted successfully");
+       }
+    }    
+    
+</script>
